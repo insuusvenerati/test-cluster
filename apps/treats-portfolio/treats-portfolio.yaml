@@ -1,0 +1,16 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: treats-portfolio
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: treats-portfolio
+      sourceRef:
+        kind: HelmRepository
+        name: stiforr
+  interval: 24h0m0s
+  targetNamespace: default
+
