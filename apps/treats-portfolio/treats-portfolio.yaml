@@ -13,4 +13,9 @@ spec:
         name: stiforr
   interval: 24h0m0s
   targetNamespace: default
-
+  install:
+    remediation:
+      retries: 10
+  upgrade:
+    remediation:
+      retries: 10
