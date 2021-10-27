@@ -19,3 +19,18 @@ spec:
   upgrade:
     remediation:
       retries: 10
+  values:
+    image:
+      tag: "8.6.0-develop.2"
+    flagger:
+      enabled: true
+    ingress:
+      enabled: true
+      className: "nginx"
+      annotations:
+        nginx.ingress.kubernetes.io/service-upstream: "true"
+      hosts:
+        - host: treats.k8s.local
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
