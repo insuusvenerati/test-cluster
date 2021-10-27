@@ -34,3 +34,8 @@ spec:
           paths:
             - path: /
               pathType: ImplementationSpecific
+    autoscaling:
+      enabled: true
+      minReplicas: 1
+      maxReplicas: 100
+      targetCPUUtilizationPercentage: 80
