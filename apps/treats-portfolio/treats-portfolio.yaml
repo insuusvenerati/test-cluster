@@ -11,7 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: stiforr
-  interval: 24h0m0s
+  interval: 1m
   targetNamespace: default
   install:
     remediation:
@@ -21,7 +21,8 @@ spec:
       retries: 10
   values:
     image:
-      tag: "8.6.0-develop.2"
+      repository: stiforr/treats-portfolio # {"$imagepolicy": "flux-system:treats-portfolio:name"}
+      tag: "8.6.0-develop.2" # {"$imagepolicy": "flux-system:treats-portfolio:tag"}
     flagger:
       enabled: true
     ingress:
