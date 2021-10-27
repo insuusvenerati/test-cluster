@@ -9,4 +9,4 @@ spec:
     name: treats-portfolio
   policy:
     semver:
-      range: "8"
+      range: ">8.0.0-develop < 9.0.0-develop"
