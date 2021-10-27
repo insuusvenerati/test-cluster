@@ -1,0 +1,12 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: treats-portfolio
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: treats-portfolio
+  policy:
+    semver:
+      range: "8"

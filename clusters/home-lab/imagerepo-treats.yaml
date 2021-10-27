@@ -1,0 +1,9 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: treats-portfolio
+  namespace: flux-system
+spec:
+  image: stiforr/treats-portfolio
+  interval: 10m0s
