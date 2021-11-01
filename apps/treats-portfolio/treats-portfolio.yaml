@@ -21,7 +21,7 @@ spec:
   values:
     image:
       repository: stiforr/treats-portfolio # {"$imagepolicy": "flux-system:treats-portfolio:name"}
-      tag: "8.6.0-develop.8" # {"$imagepolicy": "flux-system:treats-portfolio:tag"}
+      tag: "8.6.0-develop.9" # {"$imagepolicy": "flux-system:treats-portfolio:tag"}
     flagger:
       enabled: true
     ingress:
