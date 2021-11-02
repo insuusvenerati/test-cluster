@@ -7,6 +7,7 @@ spec:
   chart:
     spec:
       chart: treats-portfolio
+      version: 0.21.10
       sourceRef:
         kind: HelmRepository
         name: stiforr
