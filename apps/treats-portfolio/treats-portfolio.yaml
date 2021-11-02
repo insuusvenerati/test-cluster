@@ -26,7 +26,7 @@ spec:
       enabled: true
     ingress:
       enabled: true
-      className: "nginx"
+      className: "istio"
       annotations:
         nginx.ingress.kubernetes.io/service-upstream: "true"
       hosts:
