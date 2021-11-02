@@ -7,7 +7,7 @@ spec:
   chart:
     spec:
       chart: treats-portfolio
-      version: 0.21.12
+      version: 0.21.13
       sourceRef:
         kind: HelmRepository
         name: stiforr
@@ -25,6 +25,8 @@ spec:
       tag: "8.6.0-develop.14" # {"$imagepolicy": "flux-system:treats-portfolio:tag"}
     istio:
       enabled: true
+      hosts:
+        - "treats.k8s.local"
     flagger:
       enabled: true
     ingress:
