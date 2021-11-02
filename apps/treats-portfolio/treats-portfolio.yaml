@@ -26,9 +26,10 @@ spec:
       enabled: true
     ingress:
       enabled: true
-      className: "istio"
+#      className: "istio"
       annotations:
-        nginx.ingress.kubernetes.io/service-upstream: "true"
+#        nginx.ingress.kubernetes.io/service-upstream: "true"
+        kubernetes.io/ingress.class: istio
       hosts:
         - host: treats.k8s.local
           paths:
