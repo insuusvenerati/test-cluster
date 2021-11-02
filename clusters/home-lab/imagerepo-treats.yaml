@@ -6,4 +6,4 @@ metadata:
   namespace: flux-system
 spec:
   image: stiforr/treats-portfolio
-  interval: 10m0s
+  interval: 1m
