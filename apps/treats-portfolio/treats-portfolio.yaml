@@ -22,7 +22,7 @@ spec:
   values:
     image:
       repository: stiforr/treats-portfolio # {"$imagepolicy": "flux-system:treats-portfolio:name"}
-      tag: "8.6.0-develop.14" # {"$imagepolicy": "flux-system:treats-portfolio:tag"}
+      tag: "8.6.0-develop.15" # {"$imagepolicy": "flux-system:treats-portfolio:tag"}
     istio:
       enabled: true
       hosts:
