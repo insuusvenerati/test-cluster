@@ -15,4 +15,8 @@ spec:
     createNamespace: true
   interval: 10m0s
   targetNamespace: metrics-server
-
+  values:
+    apiService:
+      create: true
+    extraArgs:
+      kubelet-insecure-tls: true
