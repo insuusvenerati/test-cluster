@@ -37,20 +37,14 @@ spec:
         stepWeight: 10
         maxWeight: 100
         metrics:
-          - name: error-rate
-            templateRef:
-              name: error-rate
-              namespace: istio-system
+          - name: request-success-rate
             thresholdRange:
-              max: 1
-            interval: 30s
-#          - name: latency
-#            templateRef:
-#              name: latency
-#              namespace: istio-system
-#            thresholdRange:
-#              max: 500
-#            interval: 30s
+              min: 99
+            interval: 1m
+          - name: request-duration
+            thresholdRange:
+              max: 500
+            interval: 1m
     ingress:
       enabled: false
       #      className: "istio"
