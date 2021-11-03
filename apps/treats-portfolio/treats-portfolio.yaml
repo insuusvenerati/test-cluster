@@ -44,13 +44,13 @@ spec:
             thresholdRange:
               max: 1
             interval: 30s
-          - name: latency
-            templateRef:
-              name: latency
-              namespace: istio-system
-            thresholdRange:
-              max: 500
-            interval: 30s
+#          - name: latency
+#            templateRef:
+#              name: latency
+#              namespace: istio-system
+#            thresholdRange:
+#              max: 500
+#            interval: 30s
     ingress:
       enabled: false
       #      className: "istio"
