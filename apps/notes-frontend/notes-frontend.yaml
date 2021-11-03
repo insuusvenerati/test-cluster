@@ -11,9 +11,10 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: stiforr
-  interval: 1m0s
+  interval: 10m0s
   targetNamespace: default
   values:
+    repository: https://harbor.k8s.stiforr.tech/stiforr/notes-frontend
     api:
       url: http://notes-backend:8080
     ingress:
