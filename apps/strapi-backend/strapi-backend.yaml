@@ -13,4 +13,24 @@ spec:
         name: stiforr
   interval: 1m0s
   targetNamespace: default
-
+  values:
+    ingress:
+      enabled:
+      annotations:
+        kubernetes.io/ingress.class: istio
+      hosts:
+        - host: strapi-backend.k8s.local
+          paths:
+            - path: /
+              pathType: Prefix
+    resources:
+      #      limits:
+      #        cpu: 100m
+      #        memory: 128Mi
+      requests:
+        cpu: 100m
+        memory: 128Mi
+    autoscaling:
+      minReplicas: 1
+      maxReplicas: 5
+      targetCPUUtilizationPercentage: 75
