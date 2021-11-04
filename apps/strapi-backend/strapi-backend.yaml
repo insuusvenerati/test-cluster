@@ -15,7 +15,7 @@ spec:
   targetNamespace: default
   values:
     ingress:
-      enabled:
+      enabled: true
       annotations:
         kubernetes.io/ingress.class: istio
       hosts:
