@@ -19,3 +19,6 @@ spec:
       size: 5Gi
     metrics:
       enabled: true
+    global:
+      postgresql:
+        postgresqlDatabase: "test"
