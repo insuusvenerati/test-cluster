@@ -14,6 +14,10 @@ spec:
   interval: 1m0s
   targetNamespace: default
   values:
+    postgres:
+      existingSecret: "postgres-secret"
+      databaseHost: "default-postgres-postgresql"
+      databaseName: "strapi"
     ingress:
       enabled: true
       annotations:
@@ -24,9 +28,6 @@ spec:
             - path: /
               pathType: Prefix
     resources:
-      #      limits:
-      #        cpu: 100m
-      #        memory: 128Mi
       requests:
         cpu: 100m
         memory: 128Mi
