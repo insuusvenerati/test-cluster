@@ -18,6 +18,7 @@ spec:
       existingSecret: "postgres-secret"
       databaseHost: "default-postgres-postgresql"
       databaseName: "strapi"
+      jwtKey: ""
     ingress:
       enabled: true
       annotations:
