@@ -14,9 +14,10 @@ spec:
   interval: 10m0s
   targetNamespace: default
   values:
-    repository: https://harbor.k8s.stiforr.tech/stiforr/notes-frontend
+    image:
+      repository: https://harbor.k8s.stiforr.tech/stiforr/notes-frontend
     api:
-      url: http://notes-backend:8080
+      url: http://strapi-backend.k8s.local:8080
     ingress:
       enabled: true
       annotations:
