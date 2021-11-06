@@ -27,6 +27,13 @@ spec:
     alertmanager:
       enabled: false
     grafana:
+      plugins:
+        - name: 'grafana-worldmap-panel'
+          enabled: true
+          config: { }
+        - name: 'grafana-piechart-panel'
+          enabled: true
+          config: { }
       ingress:
         enabled: true
         annotations:
@@ -41,3 +48,4 @@ spec:
         podMonitorSelector:
           matchLabels:
             app.kubernetes.io/part-of: flux
+            app.kubernetes.io/name: postgresql
