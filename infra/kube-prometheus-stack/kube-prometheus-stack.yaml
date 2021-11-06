@@ -1,0 +1,51 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: kube-prometheus-stack
+  namespace: flux-system
+spec:
+  releaseName: "kube-prometheus-stack"
+  chart:
+    spec:
+      chart: kube-prometheus-stack
+      sourceRef:
+        kind: HelmRepository
+        name: prometheus
+  install:
+    createNamespace: true
+  interval: 24h
+  targetNamespace: monitoring
+#  values:
+#    grafana:
+#      enabled: true
+#      plugins:
+#        - grafana-piechart-panel
+#      adminUser: admin
+#      adminPassword: admin
+#      sidecar:
+#        dashboards:
+#          searchNamespace: ALL
+#      ingress:
+#        enabled: true
+#        annotations:
+#          kubernetes.io/ingress.class: istio
+#        hosts:
+#          - grafana.k8s.local
+#    alertmanager:
+#      enabled: false
+#    prometheusOperator:
+#      enabled: true
+#    prometheus: { }
+#      #      prometheusSpec:
+#      #        podMonitorSelector:
+#      #          matchLabels:
+#      #            app.kubernetes.io/part-of: flux
+#      additionalScrapeConfigs: { }
+#
+#      ingress:
+#        enabled: false
+#        hosts:
+#          - prom.k8s.local
+#        paths:
+#          - /
