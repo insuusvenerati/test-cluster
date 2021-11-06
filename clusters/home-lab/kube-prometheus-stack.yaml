@@ -1,18 +1,13 @@
 ---
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
-kind: HelmRelease
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
 metadata:
   name: kube-prometheus-stack
   namespace: flux-system
 spec:
-  chart:
-    spec:
-      chart: kube-prometheus-stack
-      sourceRef:
-        kind: HelmRepository
-        name: prometheus
-  install:
-    createNamespace: true
-  interval: 1m0s
-  targetNamespace: monitoring
-
+  interval: 24h0m0s
+  path: ./kube-prometheus-stack
+  prune: false
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
