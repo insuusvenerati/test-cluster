@@ -30,16 +30,3 @@ spec:
       enabled: false
     prometheusOperator:
       enabled: true
-    prometheus: { }
-      #      prometheusSpec:
-      #        podMonitorSelector:
-      #          matchLabels:
-      #            app.kubernetes.io/part-of: flux
-      additionalScrapeConfigs: { }
-
-      ingress:
-        enabled: false
-        hosts:
-          - prom.k8s.local
-        paths:
-          - /
