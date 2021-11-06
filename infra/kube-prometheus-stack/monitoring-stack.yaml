@@ -27,13 +27,7 @@ spec:
     alertmanager:
       enabled: false
     grafana:
-      plugins:
-        - name: 'grafana-worldmap-panel'
-          enabled: true
-          config: { }
-        - name: 'grafana-piechart-panel'
-          enabled: true
-          config: { }
+      plugins: [ ]
       ingress:
         enabled: true
         annotations:
