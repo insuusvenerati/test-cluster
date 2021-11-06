@@ -2,6 +2,7 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: dashboard-flux
+  namespace: monitoring
   labels:
     grafana_dashboard: "1"
 data:
