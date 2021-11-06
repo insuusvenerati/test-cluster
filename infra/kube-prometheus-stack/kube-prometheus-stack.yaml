@@ -16,36 +16,30 @@ spec:
     createNamespace: true
   interval: 24h
   targetNamespace: monitoring
-#  values:
-#    grafana:
-#      enabled: true
-#      plugins:
-#        - grafana-piechart-panel
-#      adminUser: admin
-#      adminPassword: admin
-#      sidecar:
-#        dashboards:
-#          searchNamespace: ALL
-#      ingress:
-#        enabled: true
-#        annotations:
-#          kubernetes.io/ingress.class: istio
-#        hosts:
-#          - grafana.k8s.local
-#    alertmanager:
-#      enabled: false
-#    prometheusOperator:
-#      enabled: true
-#    prometheus: { }
-#      #      prometheusSpec:
-#      #        podMonitorSelector:
-#      #          matchLabels:
-#      #            app.kubernetes.io/part-of: flux
-#      additionalScrapeConfigs: { }
-#
-#      ingress:
-#        enabled: false
-#        hosts:
-#          - prom.k8s.local
-#        paths:
-#          - /
+  values:
+    grafana:
+      enabled: true
+      adminPassword: admin
+      ingress:
+        enabled: true
+        annotations:
+          kubernetes.io/ingress.class: istio
+        hosts:
+          - grafana.k8s.local
+    alertmanager:
+      enabled: false
+    prometheusOperator:
+      enabled: true
+    prometheus: { }
+      #      prometheusSpec:
+      #        podMonitorSelector:
+      #          matchLabels:
+      #            app.kubernetes.io/part-of: flux
+      additionalScrapeConfigs: { }
+
+      ingress:
+        enabled: false
+        hosts:
+          - prom.k8s.local
+        paths:
+          - /
