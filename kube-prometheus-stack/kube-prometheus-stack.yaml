@@ -14,9 +14,6 @@ spec:
         name: prometheus
   install:
     createNamespace: true
-    crds: Create
-  upgrade:
-    crds: CreateReplace
   interval: 24h
   targetNamespace: monitoring
   values:
