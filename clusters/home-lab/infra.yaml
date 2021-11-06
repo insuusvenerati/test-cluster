@@ -2,12 +2,13 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: kube-prometheus-stack
+  name: infra
   namespace: flux-system
 spec:
-  interval: 24h0m0s
-  path: ./kube-prometheus-stack
-  prune: false
+  interval: 1h0m0s
+  path: ./infra
+  prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
+
