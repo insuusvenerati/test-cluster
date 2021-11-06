@@ -11,4 +11,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: monitoring
-
+  dependsOn:
+    - name: kube-prometheus-stack
