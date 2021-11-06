@@ -13,8 +13,10 @@ spec:
       interval: 1m
   install:
     crds: Create
+    createNamespace: true
   upgrade:
     crds: CreateReplace
+  targetNamespace: monitoring
   values:
     alertmanager:
       enabled: false
