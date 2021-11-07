@@ -39,4 +39,3 @@ spec:
         podMonitorSelector:
           matchLabels:
             app.kubernetes.io/part-of: flux
-            app.kubernetes.io/name: postgresql
