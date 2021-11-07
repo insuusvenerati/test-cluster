@@ -4,4 +4,3 @@ resources:
   - monitoring-stack.yaml
   - monitoring-config.yaml
   - dashboard-flux.yaml
-  - podmonitor-postgres.yaml
