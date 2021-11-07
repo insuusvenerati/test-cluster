@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn:
-  - name: infra
+    - name: kube-prometheus-stack
   interval: 1m0s
   path: ./infra/pod-monitors
   prune: true
