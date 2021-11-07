@@ -36,6 +36,7 @@ spec:
           searchNamespace: ALL
     prometheus:
       prometheusSpec:
+        podMonitorSelectorNilUsesHelmValues: false
         podMonitorSelector: { }
 #          matchLabels:
 #            app.kubernetes.io/part-of: flux
