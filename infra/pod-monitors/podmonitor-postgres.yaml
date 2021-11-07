@@ -6,12 +6,10 @@ metadata:
 spec:
   podMetricsEndpoints:
     - port: "http-metrics"
+      path: /metrics
   namespaceSelector:
     matchNames:
       - default
   selector:
-    matchExpressions:
-      - key: app
-        operator: In
-        values:
-          - default-postgres-postgresql
+    matchLabels:
+      app.kubernetes.io/name: postgresql
