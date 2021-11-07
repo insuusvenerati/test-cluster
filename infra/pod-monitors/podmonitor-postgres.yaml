@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   podMetricsEndpoints:
-    - port: "metrics"
+    - port: "http-metrics"
   namespaceSelector:
     matchNames:
       - default
