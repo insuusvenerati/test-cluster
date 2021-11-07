@@ -13,6 +13,12 @@ spec:
         name: stiforr
   interval: 1m0s
   targetNamespace: default
+  install:
+    remediation:
+      retries: 10
+  upgrade:
+    remediation:
+      retries: 10
   values:
     postgres:
       existingSecret: "postgres-secret"
