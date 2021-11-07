@@ -14,8 +14,10 @@ spec:
   interval: 10m0s
   targetNamespace: default
   values:
+    fullnameOverride: "notes-frontend"
     image:
-      repository: harbor.k8s.stiforr.tech/stiforr/notes-frontend
+      repository: harbor.k8s.stiforr.tech/stiforr/notes-frontend # {"$imagepolicy": "flux-system:notes-frontend:name"}
+      tag: "" # {"$imagepolicy": "flux-system:notes-frontend:tag"}
     api:
       url: http://strapi-backend.k8s.local:8080
     ingress:
@@ -27,3 +29,15 @@ spec:
           paths:
             - path: /
               pathType: Prefix
+    resources:
+      limits:
+        cpu: 100m
+        memory: 128Mi
+      requests:
+        cpu: 100m
+        memory: 128Mi
+    autoscaling:
+      enabled: false
+      minReplicas: 1
+      maxReplicas: 100
+      targetCPUUtilizationPercentage: 80

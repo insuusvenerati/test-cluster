@@ -1,0 +1,10 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: notes-frontend
+  namespace: flux-system
+spec:
+  image: harbor.k8s.stiforr.tech/stiforr/notes-frontend
+  interval: 1m0s
+
