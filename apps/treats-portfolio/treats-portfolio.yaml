@@ -23,12 +23,12 @@ spec:
     image:
       repository: stiforr/treats-portfolio # {"$imagepolicy": "flux-system:treats-portfolio:name"}
       tag: "8.6.0-develop.15" # {"$imagepolicy": "flux-system:treats-portfolio:tag"}
-#    podAnnotations:
-#      prometheus.io/scrape: "true"
+    #    podAnnotations:
+    #      prometheus.io/scrape: "true"
     istio:
       enabled: true
       hosts:
-        - "treats.k8s.local"
+        - treats.test.stiforr.tech
     flagger:
       enabled: true
       analysis:

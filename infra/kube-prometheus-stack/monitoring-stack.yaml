@@ -30,7 +30,7 @@ spec:
         annotations:
           kubernetes.io/ingress.class: istio
         hosts:
-          - grafana.k8s.local
+          - grafana.test.stiforr.tech
       sidecar:
         dashboards:
           searchNamespace: ALL
