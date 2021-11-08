@@ -26,7 +26,7 @@ spec:
     #    podAnnotations:
     #      prometheus.io/scrape: "true"
     istio:
-      enabled: true
+      enabled: false
       hosts:
         - treats.test.stiforr.tech
     flagger:
@@ -46,13 +46,13 @@ spec:
               max: 500
             interval: 1m
     ingress:
-      enabled: false
+      enabled: true
       #      className: "istio"
       annotations:
         #        nginx.ingress.kubernetes.io/service-upstream: "true"
         kubernetes.io/ingress.class: istio
       hosts:
-        - host: treats.k8s.local
+        - host: treats.test.stiforr.tech
           paths:
             - path: /
               pathType: ImplementationSpecific
