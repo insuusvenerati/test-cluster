@@ -11,10 +11,8 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: bitnami
-  install:
-    createNamespace: true
   interval: 10m0s
-  targetNamespace: metrics-server
+  targetNamespace: kube-system
   values:
     apiService:
       create: true
