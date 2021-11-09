@@ -4,3 +4,4 @@ resources:
   - cluster-issuer.yaml
   - istio-certificate.yaml
   - ingress-gateway.yaml
+  - ingress-kiali.yaml
