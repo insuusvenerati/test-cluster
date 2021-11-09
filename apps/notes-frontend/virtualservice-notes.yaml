@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: notes-frontend
+  namespace: default
+spec:
+  hosts:
+    - "notes.test.stiforr.tech"
+    - "wwww.notes.test.stiforr.tech"
+  gateways:
+    - ingress-gateway
+  http:
+    - route:
+        - destination:
+            host: notes-frontend
+            port:
+              number: 80

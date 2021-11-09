@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: istio-ingress-cert
+  namespace: istio-system
+spec:
+  secretName: istio-ingress-cert
+  dnsNames:
+    - notes.stiforr.tech
+    - www.notes.stiforr.tech
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+    group: cert-manager.io

@@ -21,7 +21,7 @@ spec:
     api:
       url: http://strapi-backend.k8s.local:8080
     ingress:
-      enabled: true
+      enabled: false
       annotations:
         kubernetes.io/ingress.class: istio
         cert-manager.io/cluster-issuer: letsencrypt-prod
