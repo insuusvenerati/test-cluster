@@ -24,11 +24,16 @@ spec:
       enabled: true
       annotations:
         kubernetes.io/ingress.class: istio
+        cert-manager.io/cluster-issuer: letsencrypt-prod
       hosts:
         - host: notes.test.stiforr.tech
           paths:
             - path: /
               pathType: Prefix
+      tls:
+        - secretName: notes-frontend-tls
+          hosts:
+            - notes.test.stiforr.tech
     resources:
       requests:
         cpu: 100m
