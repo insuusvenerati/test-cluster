@@ -11,10 +11,6 @@ spec:
         number: 443
         name: https
         protocol: HTTPS
-    - port:
-        number: 80
-        name: http
-        protocol: HTTP
       tls:
         mode: SIMPLE
         credentialName: istio-ingress-cert
