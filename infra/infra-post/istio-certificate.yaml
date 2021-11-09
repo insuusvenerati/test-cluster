@@ -8,6 +8,8 @@ spec:
   dnsNames:
     - notes.test.stiforr.tech
     - treats.test.stiforr.tech
+    - kiali.test.stiforr.tech
+    - www.kiali.test.stiforr.tech
     - www.treats.test.stiforr.tech
     - www.notes.test.stiforr.tech
   issuerRef:
