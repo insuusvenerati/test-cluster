@@ -19,6 +19,7 @@ spec:
     provider: cloudflare
     cloudflare:
       secretName: "cloudflare-secret"
+      proxied: false
     domainFilters:
       - stiforr.tech
     dryRun: false
