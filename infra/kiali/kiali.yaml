@@ -21,11 +21,14 @@ spec:
         deployment:
           accessible_namespaces:
             - '**'
-          pod_lables:
+          pod_labels:
             sidecar.istio.io/inject: "true"
         external_services:
           grafana:
             enabled: true
-            in_cluster_url: 'http://monitoring-kube-prometheus-stack-grafana.monitoring:3000'
+            in_cluster_url: 'http://monitoring-kube-prometheus-stack-grafana.monitoring'
             url: 'http://grafana.test.stiforr.tech'
+            auth:
+              type: bearer
+              token: "secret:kiali-token:token"
           discovery_enabled: true
