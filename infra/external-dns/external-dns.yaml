@@ -21,4 +21,4 @@ spec:
       secretName: "cloudflare-secret"
     domainFilters:
       - stiforr.tech
-    dryRun: true
+    dryRun: false
