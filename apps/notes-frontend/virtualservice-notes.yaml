@@ -8,7 +8,7 @@ spec:
     - "notes.test.stiforr.tech"
     - "wwww.notes.test.stiforr.tech"
   gateways:
-    - istio-system/public-gateway
+    - istio-system/ingress-gateway
   http:
     - route:
         - destination:
