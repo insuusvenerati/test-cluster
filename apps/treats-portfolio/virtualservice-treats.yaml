@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: treats-portfolio
+  namespace: default
+spec:
+  hosts:
+    - "treats.test.stiforr.tech"
+    - "wwww.treats.test.stiforr.tech"
+  gateways:
+    - istio-system/ingress-gateway
+  http:
+    - route:
+        - destination:
+            host: treats-portfolio
+            port:
+              number: 80

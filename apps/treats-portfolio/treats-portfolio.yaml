@@ -46,7 +46,7 @@ spec:
               max: 500
             interval: 1m
     ingress:
-      enabled: true
+      enabled: false
       #      className: "istio"
       annotations:
         #        nginx.ingress.kubernetes.io/service-upstream: "true"
