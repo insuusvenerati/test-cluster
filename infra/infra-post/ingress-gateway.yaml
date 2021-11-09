@@ -7,12 +7,20 @@ spec:
   selector:
     istio: ingressgateway
   servers:
-    - port:
-        number: 443
+    - hosts:
+        - "*.test.stiforr.tech"
+      port:
+        name: http
+        number: 80
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+    - hosts:
+        - "*.test.stiforr.tech"
+      port:
         name: https
+        number: 443
         protocol: HTTPS
       tls:
         mode: SIMPLE
         credentialName: istio-ingress-cert
-      hosts:
-        - "*"
