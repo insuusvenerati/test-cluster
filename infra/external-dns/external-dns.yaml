@@ -16,6 +16,7 @@ spec:
   values:
     sources:
       - ingress
+      - istio-virtualservice
     provider: cloudflare
     cloudflare:
       secretName: "cloudflare-secret"
