@@ -1,0 +1,9 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: Validate Kubernetes
+    image: gcr.io/kubeflow-images-public/kubernetes-validate:v0.1.0
+    commands:
+      - ./scripts/validate.sh
