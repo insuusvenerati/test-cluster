@@ -6,7 +6,7 @@ metadata:
 spec:
   hosts:
     - "notes.test.stiforr.tech"
-    - "wwww.notes.test.stiforr.tech"
+    - "www.notes.test.stiforr.tech"
   gateways:
     - istio-system/ingress-gateway
   http:
