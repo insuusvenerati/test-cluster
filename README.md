@@ -62,3 +62,9 @@ See [manage helm releases](https://fluxcd.io/docs/guides/helmreleases/#helm-repo
 ## infra
 
 This folder contains the infrastructure manifests that are deployed to the cluster. i.e. Istio, Kiali, Prometheus
+
+## secrets
+
+This folder contains encrypted for various deployments. The mechanism behind the encryption uses SOPS and a private pgp
+key. The public key is published within this repo for encrypting new secrets. You'll need to update the pgp id used with
+your own pgp key in `.sops.yaml`
