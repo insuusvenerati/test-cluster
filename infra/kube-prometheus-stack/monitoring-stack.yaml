@@ -24,6 +24,7 @@ spec:
     alertmanager:
       enabled: false
     grafana:
+      enabled: false
       plugins: [ ]
       ingress:
         enabled: true
