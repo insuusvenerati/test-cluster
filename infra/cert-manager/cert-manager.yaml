@@ -20,6 +20,6 @@ spec:
     installCRDs: true
     clusterResourceNamespace: "kube-system"
     prometheus:
-      enabled: true
+      enabled: false
       servicemonitor:
-        enabled: true
+        enabled: false
