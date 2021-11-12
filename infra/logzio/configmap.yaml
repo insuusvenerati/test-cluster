@@ -7,8 +7,6 @@ metadata:
   labels:
     k8s-app: fluentd-logzio
 data:
-  fluxcd.conf: |
-
   fluent.conf: |
     @include "#{ENV['FLUENTD_SYSTEMD_CONF'] || 'systemd'}.conf"
     @include "#{ENV['FLUENTD_PROMETHEUS_CONF'] || 'prometheus'}.conf"
