@@ -7,13 +7,7 @@ metadata:
   labels:
     k8s-app: fluentd-logzio
 data:
-  fluent.conf: |
-    @include "#{ENV['FLUENTD_SYSTEMD_CONF'] || 'systemd'}.conf"
-    @include "#{ENV['FLUENTD_PROMETHEUS_CONF'] || 'prometheus'}.conf"
-    @include "#{ENV['FLUENTD_KUBERNETES_CONTAINERD_CONF'] || 'kubernetes'}.conf"
-    @include system.conf
-    @include conf.d/*.conf
-
+  calyptia.conf: |
     <system>
       enable_input_metrics true
       enable_size_metrics true
@@ -30,6 +24,12 @@ data:
         api_key eyJUb2tlbklEIjoiZDQ4NzQ2ZGQtZDI4NC00ZjhlLTkwNzMtOTczMDFlZDhkMzI3IiwiUHJvamVjdElEIjoiZmZmMjEwM2EtM2MyNi00MTU2LWEyYWQtZTlmYzE0MDQyNTk3In0.gZvbb3tz2wGLDmwvhiRhanBgOWpkn8CXhpxLtvvZUOqJlo0jPJ887CohZsZmh2SA
       </cloud_monitoring>
     </source>
+  fluent.conf: |
+    @include "#{ENV['FLUENTD_SYSTEMD_CONF'] || 'systemd'}.conf"
+    @include "#{ENV['FLUENTD_PROMETHEUS_CONF'] || 'prometheus'}.conf"
+    @include "#{ENV['FLUENTD_KUBERNETES_CONTAINERD_CONF'] || 'kubernetes'}.conf"
+    @include system.conf
+    @include conf.d/*.conf
 
     <match "#{ENV['INCLUDE_NAMESPACE'] || '**'}">
       @type logzio_buffered
