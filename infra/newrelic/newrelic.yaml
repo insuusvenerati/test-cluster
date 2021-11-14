@@ -24,7 +24,7 @@ spec:
     newrelic-infrastructure:
       privileged: true
       integrations_config:
-        - name: postgres
+        - name: postgresql-config.yml
           data:
             discovery:
               command:
