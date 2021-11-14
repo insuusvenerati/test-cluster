@@ -4,5 +4,5 @@ resources:
   - treats-portfolio
   #  - strapi-backend
   - notes-frontend
-  #  - postgres
+  - postgres
   - bookinfo
