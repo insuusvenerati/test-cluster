@@ -32,10 +32,10 @@ spec:
     logging:
       enabled: true
     newrelic-pixie:
-      enabled: true
+      enabled: false
       customSecretApiKeyName: newrelic-license
       customSecretApiKeyKey: pixieApiKey
     pixie-chart:
-      enabled: true
+      enabled: false
       clusterName: civo-flux
       deployKey: px-dep-3432f300-2ee2-46d8-8298-ddb0d2221b1d
