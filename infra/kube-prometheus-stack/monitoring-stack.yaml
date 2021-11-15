@@ -24,14 +24,19 @@ spec:
     alertmanager:
       enabled: false
     grafana:
-      enabled: false
+      enabled: true
       plugins: [ ]
       ingress:
         enabled: true
         annotations:
           kubernetes.io/ingress.class: istio
+          cert-manager.io/cluster-issuer: letsencrypt-prod
         hosts:
           - grafana.test.stiforr.tech
+        tls:
+          - secretName: grafana-tls
+            hosts:
+              - grafana.test.stiforr.tech
       sidecar:
         dashboards:
           searchNamespace: ALL
