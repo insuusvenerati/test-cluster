@@ -6,10 +6,13 @@ metadata:
   labels:
     app.kubernetes.io/part-of: flux
 spec:
+  namespaceSelector:
+    matchNames:
+      - flux-system
   selector:
     matchExpressions:
       - key: app
-        operator: In
+        operator: Exists
         values:
           - helm-controller
           - source-controller
