@@ -17,8 +17,6 @@ spec:
         kind: HelmRepository
         name: prometheus
       interval: 1m
-  install:
-    createNamespace: true
   targetNamespace: monitoring
   values:
     alertmanager:
