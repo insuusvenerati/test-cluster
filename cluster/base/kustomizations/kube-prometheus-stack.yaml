@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h0m0s
-  path: ./infra/kube-prometheus-stack
+  path: ./cluster/infra/kube-prometheus-stack
   prune: true
   sourceRef:
     kind: GitRepository

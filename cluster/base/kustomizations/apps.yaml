@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 24h0m0s
-  path: ./apps
+  path: ./cluster/apps
   prune: true
   sourceRef:
     kind: GitRepository

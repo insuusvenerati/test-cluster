@@ -7,10 +7,10 @@ metadata:
 spec:
   dependsOn:
     - name: cert-manager
-    #  - name: kube-prometheus-stack
+    - name: kube-prometheus-stack
     - name: external-dns
   interval: 24h0m0s
-  path: ./infra/infra-post
+  path: ./cluster/infra/infra-post
   prune: false
   sourceRef:
     kind: GitRepository

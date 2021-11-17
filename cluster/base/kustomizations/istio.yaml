@@ -8,7 +8,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infra/istio/operator
+  path: ./cluster/infra/istio/operator
   prune: true
   validation: client
   healthChecks:
@@ -29,7 +29,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infra/istio/system
+  path: ./cluster/infra/istio/system
   prune: true
   validation: client
   healthChecks:
@@ -54,6 +54,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infra/istio/gateway
+  path: ./cluster/infra/istio/gateway
   prune: true
   validation: client

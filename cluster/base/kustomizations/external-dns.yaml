@@ -6,9 +6,9 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn:
-  - name: sops-secrets
+    - name: sops-secrets
   interval: 24h0m0s
-  path: ./infra/external-dns
+  path: ./cluster/infra/external-dns
   prune: true
   sourceRef:
     kind: GitRepository

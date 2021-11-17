@@ -7,8 +7,8 @@ metadata:
 spec:
   dependsOn:
     - name: kube-prometheus-stack
-  interval: 1m0s
-  path: ./infra/pod-monitors
+  interval: 10m0s
+  path: ./cluster/infra/pod-monitors
   prune: true
   sourceRef:
     kind: GitRepository
