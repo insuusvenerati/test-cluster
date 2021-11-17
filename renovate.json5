@@ -7,7 +7,7 @@
     {
       // tell renovatebot to parse only helm releases
       "fileMatch": [
-        "cluster/.+helm-release\\.yaml$"
+        "cluster/.+\\.yaml$"
       ],
       // tell renovatebot to match the following pattern in helm release files
       "matchStrings": [
