@@ -1,0 +1,16 @@
+name: Renovate - Update helm releases
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */4 * * *"
+
+jobs:
+  update-helm-release-annotations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Renovate Helm Releases
+        uses: k8s-at-home/renovate-helm-releases@v1.4.5
+        with:
+          cluster-path: "./clusters"
