@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: serving.knative.dev/v1
+metadata:
+  name: serverless-function
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+        - image: ubuntu:20.04
+          command:
+            - echo "Hello World"
