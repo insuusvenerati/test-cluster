@@ -5,4 +5,4 @@ resources:
   #  - strapi-backend
   - notes-frontend
   - postgres
-  - bookinfo
+#  - bookinfo
