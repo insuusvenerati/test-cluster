@@ -1,0 +1,18 @@
+apiVersion: operator.knative.dev/v1alpha1
+kind: KnativeServing
+metadata:
+  name: knative-serving
+spec:
+  version: 0.25.0
+  additionalManifests:
+    - URL: https://raw.githubusercontent.com/insuusvenerati/knative-manifests/1.0.0/namespace.yaml
+  config:
+    domain:
+      "serverless.k8s.stiforr.tech": ""
+    certmanager:
+      issuerRef: |
+        kind: ClusterIssuer
+        name: letsencrypt-prod
+    network:
+      autoTLS: Enabled
+      httpProtocol: Redirected
