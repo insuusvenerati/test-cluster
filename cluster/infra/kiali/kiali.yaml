@@ -11,6 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: kiali
+        namespace: flux-system
   interval: 24h0m0s
   targetNamespace: istio-system
   values:
