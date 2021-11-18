@@ -8,9 +8,11 @@ spec:
   interval: 24h0m0s
   path: ./cluster/infra/knative-operator
   prune: true
+  targetNamespace: knative
   sourceRef:
     kind: GitRepository
     name: flux-system
+    namespace: flux-system
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
@@ -26,6 +28,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+    namespace: flux-system
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
@@ -41,3 +44,4 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+    namespace: flux-system

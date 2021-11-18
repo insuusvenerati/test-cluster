@@ -11,7 +11,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: knative
+---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -25,7 +29,7 @@ spec:
       served: true
       storage: true
       subresources:
-        status: {}
+        status: { }
       schema:
         openAPIV3Schema:
           description: Schema for the knativeeventings API
@@ -319,7 +323,7 @@ spec:
       served: true
       storage: true
       subresources:
-        status: {}
+        status: { }
       schema:
         openAPIV3Schema:
           description: Schema for the knativeservings API
@@ -844,8 +848,8 @@ aggregationRule:
     # roles that are provided to the admin of the cluster by knative serving
     # automatically.
     - matchExpressions:
-        - {key: serving.knative.dev/release, operator: Exists}
-rules: [] # Rules are automatically filled in by the controller manager.
+        - { key: serving.knative.dev/release, operator: Exists }
+rules: [ ] # Rules are automatically filled in by the controller manager.
 ---
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
@@ -1046,8 +1050,8 @@ aggregationRule:
     # roles that are provided to the admin of the cluster by knative eventing
     # automatically.
     - matchExpressions:
-        - {key: eventing.knative.dev/release, operator: Exists}
-rules: [] # Rules are automatically filled in by the controller manager.
+        - { key: eventing.knative.dev/release, operator: Exists }
+rules: [ ] # Rules are automatically filled in by the controller manager.
 ---
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
