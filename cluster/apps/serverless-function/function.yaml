@@ -9,4 +9,4 @@ spec:
       containers:
         - image: ubuntu:20.04
           command:
-            - echo "Hello World"
+            - sh -c echo "Hello World"
