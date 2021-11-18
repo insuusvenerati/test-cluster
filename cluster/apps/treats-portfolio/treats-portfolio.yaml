@@ -6,6 +6,7 @@ metadata:
 spec:
   chart:
     spec:
+      # renovate: registryUrl=https://harbor.k8s.stiforr.tech/chartrepo/stiforr
       chart: treats-portfolio
       version: 0.21.14
       sourceRef:

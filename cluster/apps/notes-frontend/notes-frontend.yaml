@@ -6,6 +6,7 @@ metadata:
 spec:
   chart:
     spec:
+      # renovate: registryUrl=https://harbor.k8s.stiforr.tech/chartrepo/stiforr
       chart: notes-frontend
       version: 0.1.16
       sourceRef:
