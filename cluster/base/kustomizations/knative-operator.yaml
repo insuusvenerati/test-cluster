@@ -9,6 +9,8 @@ spec:
   path: ./cluster/infra/knative-operator
   prune: true
   targetNamespace: knative
+  dependsOn:
+    - name: namespaces
   sourceRef:
     kind: GitRepository
     name: flux-system
