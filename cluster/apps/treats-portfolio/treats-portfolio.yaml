@@ -24,7 +24,7 @@ spec:
   values:
     image:
       repository: stiforr/treats-portfolio # {"$imagepolicy": "flux-system:treats-portfolio:name"}
-      tag: "8.6.0-develop.19" # {"$imagepolicy": "flux-system:treats-portfolio:tag"}
+      tag: "8.6.0-develop.20" # {"$imagepolicy": "flux-system:treats-portfolio:tag"}
     #    podAnnotations:
     #      prometheus.io/scrape: "true"
     istio:
