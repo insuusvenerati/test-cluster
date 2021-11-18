@@ -6,4 +6,4 @@ resources:
   - notes-frontend
   - postgres
   #  - bookinfo
-  - serverless-function
+#  - serverless-function
