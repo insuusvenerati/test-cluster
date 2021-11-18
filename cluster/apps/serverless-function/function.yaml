@@ -7,6 +7,14 @@ spec:
   template:
     spec:
       containers:
-        - image: ubuntu:20.04
+        - image: node:16
           command:
-            - sh -c echo "Hello World"
+            - |
+              var getRawBody = require('raw-body')
+              var version = 'coffee-default'
+              module.exports.handler = function (request, response, context) {
+                  var respBody = new Buffer('Hello v3 ' + version + '\n')
+                  response.setStatusCode(200)
+                  response.setHeader('content-type', 'application/json')
+                  response.send(respBody)
+              };
