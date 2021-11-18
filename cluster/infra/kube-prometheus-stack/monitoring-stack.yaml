@@ -20,6 +20,7 @@ spec:
       interval: 1m
   targetNamespace: monitoring
   values:
+    fullnameOverride: "kube-prometheus-stack"
     alertmanager:
       enabled: false
     grafana:
