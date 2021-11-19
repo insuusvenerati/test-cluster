@@ -42,6 +42,6 @@ spec:
         memory: 128Mi
     autoscaling:
       enabled: true
-      minReplicas: 2
+      minReplicas: 1
       maxReplicas: 100
       targetCPUUtilizationPercentage: 80
