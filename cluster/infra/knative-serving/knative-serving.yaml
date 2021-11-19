@@ -4,7 +4,7 @@ metadata:
   name: knative-serving
   namespace: knative-serving
 spec:
-  version: 0.26.1
+  version: 1.0.1
   additionalManifests:
     - URL: https://raw.githubusercontent.com/insuusvenerati/knative-manifests/1.0.0/namespace.yaml
   manifests:
