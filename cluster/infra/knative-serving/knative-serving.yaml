@@ -8,10 +8,10 @@ spec:
   additionalManifests:
     - URL: https://raw.githubusercontent.com/insuusvenerati/knative-manifests/1.0.0/namespace.yaml
   manifests:
-    - URL: https://github.com/knative/serving/releases/download/v${VERSION}/serving-core.yaml
-    - URL: https://github.com/knative/serving/releases/download/v${VERSION}/serving-hpa.yaml
-    - URL: https://github.com/knative/serving/releases/download/v${VERSION}/serving-post-install-jobs.yaml
-    - URL: https://github.com/knative/net-istio/releases/download/v${VERSION}/net-istio.yaml
+    - URL: https://github.com/knative/serving/releases/download/knative-v${VERSION}/serving-core.yaml
+    - URL: https://github.com/knative/serving/releases/download/knative-v${VERSION}/serving-hpa.yaml
+    - URL: https://github.com/knative/serving/releases/download/knative-v${VERSION}/serving-post-install-jobs.yaml
+    - URL: https://github.com/knative/net-istio/releases/download/knative-v${VERSION}/net-istio.yaml
   config:
     domain:
       "serverless.k8s.stiforr.tech": ""
