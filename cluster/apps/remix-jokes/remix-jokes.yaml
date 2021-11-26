@@ -29,7 +29,7 @@ spec:
         - host: remix-jokes.k8s.stiforr.tech
           paths:
             - path: /
-              pathType: ImplementationSpecific
+              pathType: Prefix
       tls:
         - secretName: remix-jokes-tls
           hosts:
