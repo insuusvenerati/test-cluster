@@ -8,6 +8,7 @@ spec:
   chart:
     spec:
       chart: remix-jokes
+      version: 0.1.1
       sourceRef:
         kind: HelmRepository
         name: stiforr
@@ -20,17 +21,4 @@ spec:
       pullPolicy: IfNotPresent
       tag: "latest"
     ingress:
-      enabled: true
-      #      className: "istio"
-      annotations:
-        cert-manager.io/cluster-issuer: letsencrypt-prod
-        kubernetes.io/ingress.class: istio
-      hosts:
-        - host: remix-jokes.k8s.stiforr.tech
-          paths:
-            - path: /
-              pathType: Prefix
-      tls:
-        - secretName: remix-jokes-tls
-          hosts:
-            - remix-jokes.k8s.stiforr.tech
+      enabled: false
