@@ -20,6 +20,11 @@ spec:
         kind: ClusterIssuer
         name: letsencrypt-prod
     network:
-      autoTLS: Enabled
+      auto-tls: "Enabled"
       httpProtocol: Redirected
       autocreate-cluster-domain-claims: "true"
+      namespace-wildcard-cert-selector:
+        matchExpressions:
+          - key: "networking.knative.dev/disableWildcardCert"
+            operator: "NotIn"
+            values: [ "true" ]
