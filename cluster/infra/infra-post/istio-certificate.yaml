@@ -9,6 +9,8 @@ spec:
     - notes.test.stiforr.tech
     - treats.test.stiforr.tech
     - kiali.test.stiforr.tech
+    - remix-jokes.test.stiforr.tech
+    - www.remix-jokes.test.stiforr.tech
     - www.kiali.test.stiforr.tech
     - www.treats.test.stiforr.tech
     - www.notes.test.stiforr.tech
