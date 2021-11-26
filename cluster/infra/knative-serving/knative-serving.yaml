@@ -22,3 +22,4 @@ spec:
     network:
       autoTLS: Enabled
       httpProtocol: Redirected
+      autocreate-cluster-domain-claims: "true"
