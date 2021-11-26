@@ -1,0 +1,17 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: remix-jokes
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: remix-jokes
+      sourceRef:
+        kind: HelmRepository
+        name: stiforr
+  interval: 24h0m0s
+  releaseName: remix-jokes
+  targetNamespace: default
+
