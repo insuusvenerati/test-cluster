@@ -21,9 +21,10 @@ spec:
       tag: "latest"
     ingress:
       enabled: true
-      className: "istio"
+      #      className: "istio"
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
+        kubernetes.io/ingress.class: istio
       hosts:
         - host: remix-jokes.k8s.stiforr.tech
           paths:
