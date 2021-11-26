@@ -23,8 +23,6 @@ spec:
       auto-tls: "Enabled"
       httpProtocol: Redirected
       autocreate-cluster-domain-claims: "true"
-      namespace-wildcard-cert-selector:
-        matchExpressions:
-          - key: "networking.knative.dev/disableWildcardCert"
-            operator: "NotIn"
-            values: [ "true" ]
+      namespace-wildcard-cert-selector: >-
+        {"matchExpressions": [{"key":"networking.knative.dev/disableWildcardCert",
+        "operator": "NotIn", "values":["true"]}]}
