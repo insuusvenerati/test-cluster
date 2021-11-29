@@ -15,7 +15,6 @@ spec:
   interval: 24h0m0s
   targetNamespace: istio-system
   values:
-    fullnameOverride: "kiali"
     cr:
       create: true
       namespace: istio-system

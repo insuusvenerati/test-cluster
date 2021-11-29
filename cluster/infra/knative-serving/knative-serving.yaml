@@ -28,6 +28,6 @@ spec:
         "operator": "In", "values":["true"]}]}
     tracing:
       backend: "zipkin"
-      zipkin-endpoint: "http://jaeger.istio-system.svc.cluster.local:9411/api/v2/spans"
+      zipkin-endpoint: "http://jaeger-collector.istio-system.svc.cluster.local:9411/api/v2/spans"
       debug: "false"
       sample-rate: "0.1"
