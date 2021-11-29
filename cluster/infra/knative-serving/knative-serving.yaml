@@ -26,3 +26,8 @@ spec:
       namespace-wildcard-cert-selector: >-
         {"matchExpressions": [{"key":"networking.knative.dev/enableWildcardCert",
         "operator": "In", "values":["true"]}]}
+    tracing:
+      backend: "zipkin"
+      zipkin-endpoint: "http://jaeger.istio-system.svc.cluster.local:9411/api/v2/spans"
+      debug: "false"
+      sample-rate: "0.1"
