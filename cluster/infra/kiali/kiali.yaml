@@ -32,4 +32,10 @@ spec:
             auth:
               type: bearer
               token: "secret:kiali-token:token"
+          prometheus:
+            url: "http://kube-prometheus-stack-prometheus.monitoring:9090"
+          tracing:
+            enabled: true
+            in_cluster_url: "http://jaeger-collector.istio-system:9411"
+            use_grpc: false
           discovery_enabled: true
