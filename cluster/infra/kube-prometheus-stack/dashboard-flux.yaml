@@ -4,7 +4,7 @@ metadata:
   name: dashboard-flux
   namespace: monitoring
   labels:
-    grafana_dashboard: "2"
+    grafana_dashboard: "1"
 data:
   dashboard-flux: |
     {

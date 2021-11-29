@@ -51,6 +51,7 @@ spec:
               - grafana.test.stiforr.tech
       sidecar:
         dashboards:
+          enabled: true
           searchNamespace: ALL
     prometheus:
       prometheusSpec:
