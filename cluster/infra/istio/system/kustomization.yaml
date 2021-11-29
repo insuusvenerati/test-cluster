@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - profile.yaml
-  - zipkin.yaml
+  - jaeger.yaml
