@@ -24,4 +24,4 @@ spec:
   values:
     image:
       repository: stiforr/treats-portfolio # {"$imagepolicy": "flux-system:treats-portfolio:name"}
-      tag: "8.6.0-develop.23" # {"$imagepolicy": "flux-system:treats-portfolio:tag"}
+      tag: "8.6.0-develop.25" # {"$imagepolicy": "flux-system:treats-portfolio:tag"}
