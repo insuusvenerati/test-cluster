@@ -13,5 +13,4 @@ spec:
     name: flux-system
     namespace: flux-system
   dependsOn:
-    - name: istio-gateway
     - name: sops-secrets
