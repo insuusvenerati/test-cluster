@@ -40,19 +40,19 @@ spec:
       name: istiod
       namespace: istio-system
 ---
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: istio-gateway
-  namespace: flux-system
-spec:
-  dependsOn:
-    - name: istio-system
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-    namespace: flux-system
-  path: ./cluster/infra/istio-manifests/gateway
-  prune: true
-  validation: client
+#apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+#kind: Kustomization
+#metadata:
+#  name: istio-gateway
+#  namespace: flux-system
+#spec:
+#  dependsOn:
+#    - name: istio-system
+#  interval: 10m0s
+#  sourceRef:
+#    kind: GitRepository
+#    name: flux-system
+#    namespace: flux-system
+#  path: ./cluster/infra/istio-manifests/gateway
+#  prune: true
+#  validation: client
