@@ -8,7 +8,7 @@ spec:
     spec:
       # renovate: registryUrl=https://harbor.k8s.stiforr.tech/chartrepo/stiforr
       chart: treats-portfolio
-      version: 0.22.0
+      version: 0.22.1
       sourceRef:
         kind: HelmRepository
         name: stiforr
@@ -25,48 +25,3 @@ spec:
     image:
       repository: stiforr/treats-portfolio # {"$imagepolicy": "flux-system:treats-portfolio:name"}
       tag: "8.6.0-develop.21" # {"$imagepolicy": "flux-system:treats-portfolio:tag"}
-    #    podAnnotations:
-    #      prometheus.io/scrape: "true"
-    istio:
-      enabled: false
-      hosts:
-        - treats.test.stiforr.tech
-    flagger:
-      enabled: true
-      analysis:
-        interval: 1m
-        threshold: 5
-        stepWeight: 10
-        maxWeight: 100
-        metrics:
-          - name: request-success-rate
-            thresholdRange:
-              min: 99
-            interval: 1m
-          - name: request-duration
-            thresholdRange:
-              max: 500
-            interval: 1m
-    ingress:
-      enabled: false
-      #      className: "istio"
-      annotations:
-        #        nginx.ingress.kubernetes.io/service-upstream: "true"
-        kubernetes.io/ingress.class: istio
-      hosts:
-        - host: treats.test.stiforr.tech
-          paths:
-            - path: /
-              pathType: ImplementationSpecific
-    autoscaling:
-      enabled: true
-      minReplicas: 1
-      maxReplicas: 100
-      targetCPUUtilizationPercentage: 80
-    resources:
-      requests:
-        cpu: "100m"
-        memory: "128Mi"
-      limits:
-        cpu: "250m"
-        memory: "256Mi"
