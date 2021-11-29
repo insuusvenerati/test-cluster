@@ -26,6 +26,18 @@ spec:
     grafana:
       enabled: true
       plugins: [ ]
+      persistence:
+        type: pvc
+        enabled: true
+        # storageClassName: default
+        accessModes:
+          - ReadWriteOnce
+        size: 10Gi
+        # annotations: {}
+        finalizers:
+          - kubernetes.io/pvc-protection
+        inMemory:
+          enabled: false
       ingress:
         enabled: true
         annotations:
