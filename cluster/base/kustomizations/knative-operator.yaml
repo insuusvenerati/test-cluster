@@ -15,35 +15,35 @@ spec:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: knative-serving
-  namespace: flux-system
-spec:
-  interval: 24h0m0s
-  dependsOn:
-    - name: knative-operator
-  path: ./cluster/infra/knative-serving
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-    namespace: flux-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: knative-serving-config
-  namespace: flux-system
-spec:
-  interval: 24h0m0s
-  dependsOn:
-    - name: knative-serving
-  path: ./cluster/infra/knative-serving-config
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-    namespace: flux-system
+#---
+#apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+#kind: Kustomization
+#metadata:
+#  name: knative-serving
+#  namespace: flux-system
+#spec:
+#  interval: 24h0m0s
+#  dependsOn:
+#    - name: knative-operator
+#  path: ./cluster/infra/knative-serving
+#  prune: true
+#  sourceRef:
+#    kind: GitRepository
+#    name: flux-system
+#    namespace: flux-system
+#---
+#apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+#kind: Kustomization
+#metadata:
+#  name: knative-serving-config
+#  namespace: flux-system
+#spec:
+#  interval: 24h0m0s
+#  dependsOn:
+#    - name: knative-serving
+#  path: ./cluster/infra/knative-serving-config
+#  prune: true
+#  sourceRef:
+#    kind: GitRepository
+#    name: flux-system
+#    namespace: flux-system
