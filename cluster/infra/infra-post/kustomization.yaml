@@ -2,6 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - cluster-issuer.yaml
-  #  - istio-certificate.yaml
+  - istio-certificate.yaml
   - ingress-gateway.yaml
   - ingress-kiali.yaml
